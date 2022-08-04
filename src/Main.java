@@ -20,7 +20,6 @@ public class Main {
 //Теперь проверку нужно обернуть в метод и использовать год, который приходит в виде параметра.
 //Результат программы выведите в консоль. Если год високосный, то должно быть выведено “*номер года —* високосный год”.
 // Если год не високосный, то, соответственно: “*номер года —* не **високосный год”.
-
     public static boolean checkingTheYear(int year) {
         return ((year % 4 == 0) && (year % 100 != 0) || year % 400 == 0);
     }
@@ -42,9 +41,9 @@ public class Main {
 // какую версию приложения (обычную или lite) и для какой ОС (Android или iOS) нужно установить пользователю.
 
     public static int getClientOs(String osName) {                                // узнать клиентскую OS
-        if (osName.equals("iOS")) {
+        if (osName.equalsIgnoreCase("ios")) {
             return 0;                                    // iOS
-        } else if (osName.equals("Android")) {
+        } else if (osName.equalsIgnoreCase("android")) {
             return 1;                                   //Android
         } else return 2;
     }
